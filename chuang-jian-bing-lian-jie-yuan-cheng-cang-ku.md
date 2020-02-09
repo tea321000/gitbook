@@ -78,7 +78,7 @@ Unpacking objects: 100% (9/9), 628 bytes | 13.00 KiB/s, done.
 $ cd repo
 ```
 
-或者使用ssh方式进行克隆，这种方式可以使用我们之前的免密码密钥，同步不需要用户名和密码：
+或者使用ssh方式进行克隆，这种方式不像https协议在远程提交时使用用户名和密码进行临时token的无状态验证，可以使用我们之前的免密码密钥，同步不需要用户名和密码：
 
 ```text
 $ git clone git@github.com:user/repo.git
