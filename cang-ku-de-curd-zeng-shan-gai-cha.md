@@ -9,7 +9,7 @@ $ echo "hello world" > hello.txt && git add hello.txt
 
 这里我们在该文件夹下新建了写有hello world内容的hello.txt，并且**git add**将这个文件添加到了本地git的文件索引中，git的文件索引保存了目录工作树的快照，之后每次该文件内容发生改变（SHA值发生改变），文件索引都会将改动记录下来。在远程提交前可以进行多次**git add**并将内容一次性进行远程提交。
 
-要想从本地git索引中删除文件，则使用**git rm**指令：
+要想从本地git索引中**删除**文件，则使用**git rm**指令：
 
 ```text
 $ git rm hello.txt
@@ -42,6 +42,8 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```text
 git checkout [branch-name]
 ```
+
+我们还可以使用**git fetch**查看远程仓库的改动，并通过**git pull**将远程仓库的改动同步到本地仓库中：
 
 
 

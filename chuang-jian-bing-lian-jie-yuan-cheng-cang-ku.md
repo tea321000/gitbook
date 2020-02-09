@@ -84,5 +84,17 @@ $ cd repo
 $ git clone git@github.com:user/repo.git
 ```
 
+{% hint style="warning" %}
+假如在使用ssh方式克隆时出现了：
+
+`Host key verification failed. fatal: Could not read from remote repository.`
+
+`Please make sure you have the correct access rights and the repository exists.`
+
+这样的错误提示，需要将github.com加入信任的机构中：
+
+`ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts`
+{% endhint %}
+
 在下一步中我们再进行仓库的CURD（增删改查）操作。
 
