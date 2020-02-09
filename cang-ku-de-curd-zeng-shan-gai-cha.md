@@ -20,6 +20,15 @@ $ git rm hello.txt
 ```text
 $ git commit -m "提交注释"
 $ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 349 bytes | 349.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/user/repo
+   1af88ab..c3526f7  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
 第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。下一次推送的时候只需要输入**git push**即可。至此我们就完成了一次远程提交到远程仓库的操作。
@@ -28,5 +37,5 @@ $ git push -u origin master
 
 {% embed url="https://nvie.com/posts/a-successful-git-branching-model/" %}
 
-
+要新建分支，可以使用**git checkout**命令完成：
 
