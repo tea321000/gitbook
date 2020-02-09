@@ -1,5 +1,5 @@
 # Table of contents
 
-* [简介](README.md)
-* [git的下载及安装](git-de-xia-zai-ji-an-zhuang.md)
+* [项目简介](README.md)
+* [环境准备](huan-jing-zhun-bei.md)
 
