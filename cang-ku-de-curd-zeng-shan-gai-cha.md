@@ -22,7 +22,9 @@ $ git commit -m "提交注释"
 $ git push -u origin master
 ```
 
-第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。仓库刚建立的时候只有**master**主分支，一般完整的仓库版本迭代需要稳定版**master**主分支，带有比较激进特性的**dev**分支，以及**dev**分支开发过程中一些出现bug还没修好的中间分支。在中间分支完成后合并到dev分支，经过一段时间后再合并到master分支完成一次更新。详情可见如下链接，里面的图非常生动形象。
+第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。下一次推送的时候只需要输入**git push**即可。至此我们就完成了一次远程提交到远程仓库的操作。
+
+仓库刚建立的时候只有**master**主分支，一般完整的仓库版本迭代需要稳定版**master**主分支，带有比较激进特性的**dev**分支，以及**dev**分支开发过程中一些出现bug还没修好的中间分支。在中间分支完成后合并到dev分支，经过一段时间后再合并到master分支完成一次更新。详细的分支模型介绍可见如下链接，里面的图非常生动形象。
 
 {% embed url="https://nvie.com/posts/a-successful-git-branching-model/" %}
 
