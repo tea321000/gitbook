@@ -23,7 +23,7 @@ The key fingerprint is:
 
 ```
 
-key fingerprint下面可以看到我们生成的SHA256值等信息，接着按上面提示的公钥存放目录将公钥内容显示出来：
+key fingerprint下面可以看到我们生成的SHA256值等信息，接着按上面提示的公钥存放目录将公钥内容在命令行中显示出来：
 
 ```bash
 cat ~/.ssh/id_rsa.pub
@@ -35,11 +35,30 @@ cat ~/.ssh/id_rsa.pub
 ssh-rsa ...... me@DESKTOP-02FTDM3
 ```
 
-将上面这段内容复制，然后在[github主页面](https://github.com/)右上角用户头像下找到settings，在跳转的页面中找到SSH and GPG keys，点击右边的New SSH Key将复制的内容进行粘贴将我们生成的公钥添加到github中。
+将上面这段内容复制，然后在[github主页面](https://github.com/)右上角用户头像下找到settings，在跳转的页面中找到SSH and GPG keys，点击右上角的New SSH Key，将复制的内容在Key一栏进行粘贴，Title自行命名（这里我命名为surface），将我们生成的公钥添加到github中。
+
+![](.gitbook/assets/tim-jie-tu-20200210005221.png)
 
 ![](.gitbook/assets/bu-huo.JPG)
 
-![](.gitbook/assets/bu-huo%20%281%29.JPG)
+接下来我们要在命令行中输入我们github里的用户名和邮箱，假如要使得在新开命令行的情况下也不需要重复输入，则加入**--global**全局参数：
 
+```bash
+$ git config --global user.name "你的用户名"
+$ git config --global user.email "你的邮箱"
+```
 
+## 创建远程仓库
+
+首先我们要先创建远程仓库，然后将本地仓库文件夹连接至远程仓库。创建远程仓库有两种方式：
+
+1.在github的右上角+号点击New respository进行新远程仓库的建立，建立仓库的时候可以选择仓库权限公开或者私密。
+
+![](.gitbook/assets/tim-jie-tu-20200210005530.png)
+
+2.使用**git remote add**命令进行建立，**origin**为后面的https链接参数的short name，**user**为你的github用户名，**repo**表示要建立的远程仓库的名称。
+
+```
+$ git remote add origin https://github.com/user/repo.git
+```
 
