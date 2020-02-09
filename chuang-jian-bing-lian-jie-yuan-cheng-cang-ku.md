@@ -37,6 +37,8 @@ ssh-rsa ...... me@DESKTOP-02FTDM3
 
 将上面这段内容复制，然后在[github主页面](https://github.com/)右上角用户头像下找到settings，在跳转的页面中找到SSH and GPG keys，点击右上角的New SSH Key，将复制的内容在Key一栏进行粘贴，Title自行命名（这里我命名为surface），将我们生成的公钥添加到github中。
 
+之所以要将公钥而不是私钥添加到网站中，是因为公钥加密私钥解，私钥签名公钥验，我们是不希望别人冒充我们发信息，因此数字签名是私钥签名公钥验证。
+
 ![](.gitbook/assets/tim-jie-tu-20200210005221.png)
 
 ![](.gitbook/assets/bu-huo.JPG)
