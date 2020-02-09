@@ -50,15 +50,33 @@ $ git config --global user.email "你的邮箱"
 
 ## 创建远程仓库
 
-首先我们要先创建远程仓库，然后将本地仓库文件夹连接至远程仓库。创建远程仓库有两种方式：
+首先我们要先创建远程仓库，然后将远程仓库克隆至本地文件夹。创建远程仓库有两种方式：
 
 1.在github的右上角+号点击New respository进行新远程仓库的建立，建立仓库的时候可以选择仓库权限公开或者私密。
 
 ![](.gitbook/assets/tim-jie-tu-20200210005530.png)
 
-2.使用**git remote add**命令进行建立，**origin**为后面的https链接参数的short name，**user**为你的github用户名，**repo**表示要建立的远程仓库的名称。
+2.使用**git remote add**命令进行建立，**origin**为后面的https链接参数的short name别称，**user**为你的github用户名，**repo**表示要建立的远程仓库的名称。
 
 ```
 $ git remote add origin https://github.com/user/repo.git
 ```
+
+## 克隆本地仓库
+
+使用**git clone**命令将远程仓库克隆到本地的文件夹中，参数意义同上一步一致。当然新建立的远程仓库除了readme之外是没有内容的，我这里演示的时候克隆了一个已经加入了文件的远程仓库。克隆完后进入该文件夹，完成克隆。在下一步中我们再进行仓库的CURD（增删改查）操作。
+
+```text
+$ git clone https://github.com/user/repo.git
+Cloning into 'repo'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 1), reused 8 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 628 bytes | 13.00 KiB/s, done.
+
+$ cd repo
+```
+
+
 
