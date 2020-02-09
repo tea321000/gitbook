@@ -15,7 +15,7 @@ $ echo "hello world" > hello.txt && git add hello.txt
 $ git rm hello.txt
 ```
 
-在本地索引添加了新文件之后，我们需要在推送到远程仓库前先进行**git commit**本地提交，在提交注释中简要说明本次提交所做的更改，然后再进行**git push**远程推送：
+在本地索引添加了新文件之后，我们需要在推送到远程仓库前先进行**git commit**本地提交，在提交注释中简要说明本次提交所做的更改，然后再进行**git push**远程推送。前面假如使用了https协议方式而不是ssh方式来进行克隆，每一次同步操作都需要输入用户名和密码：
 
 ```text
 $ git commit -m "提交注释"
@@ -33,9 +33,15 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。下一次推送的时候只需要输入**git push**即可。至此我们就完成了一次远程提交到远程仓库的操作。
 
-仓库刚建立的时候只有**master**主分支，一般完整的仓库版本迭代需要稳定版**master**主分支，带有比较激进特性的**dev**分支，以及**dev**分支开发过程中一些出现bug还没修好的中间分支。在中间分支完成后合并到dev分支，经过一段时间后再合并到master分支完成一次更新。详细的分支模型介绍可见如下链接，里面的图非常生动形象。
+仓库刚建立的时候只有**master**主分支，一般完整的仓库版本迭代需要稳定版**master**主分支，带有比较激进特性的**dev**分支，以及**dev**分支开发过程中一些出现bug还没修好的中间分支。在中间分支完成后合并到**dev**分支，经过一段时间后再合并到**master**分支完成一次更新。详细的分支模型介绍可见如下链接，里面的图非常生动形象。
 
 {% embed url="https://nvie.com/posts/a-successful-git-branching-model/" %}
 
 要新建分支，可以使用**git checkout**命令完成：
+
+```text
+git checkout [branch-name]
+```
+
+
 

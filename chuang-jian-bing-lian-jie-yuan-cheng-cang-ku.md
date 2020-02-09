@@ -64,7 +64,7 @@ $ git remote add origin https://github.com/user/repo.git
 
 ## 克隆本地仓库
 
-使用**git clone**命令将远程仓库克隆到本地的文件夹中，参数意义同上一步一致。当然新建立的远程仓库除了readme之外是没有内容的，我这里演示的时候克隆了一个已经加入了文件的远程仓库。克隆完后进入该文件夹，完成克隆。在下一步中我们再进行仓库的CURD（增删改查）操作。
+使用**git clone**命令将远程仓库克隆到本地的文件夹中，参数意义同上一步一致。当然新建立的远程仓库除了readme之外是没有内容的，我这里演示的时候克隆了一个已经加入了文件的远程仓库。克隆完后进入该文件夹，完成克隆。
 
 ```text
 $ git clone https://github.com/user/repo.git
@@ -78,5 +78,11 @@ Unpacking objects: 100% (9/9), 628 bytes | 13.00 KiB/s, done.
 $ cd repo
 ```
 
+或者使用ssh方式进行克隆，这种方式可以使用我们之前的免密码密钥，同步不需要用户名和密码：
 
+```text
+$ git clone git@github.com:user/repo.git
+```
+
+在下一步中我们再进行仓库的CURD（增删改查）操作。
 
