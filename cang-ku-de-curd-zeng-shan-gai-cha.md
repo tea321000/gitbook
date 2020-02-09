@@ -53,7 +53,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 git checkout [branch-name]
 ```
 
-我们还可以使用**git fetch查看**远程仓库的改动，并通过**git pull**将远程仓库特定分支（下面为**master**）的改动同步到本地仓库中：
+我们还可以使用**git fetch 查看**远程仓库的改动，并通过**git pull**将远程仓库特定分支（下面为**master**）的改动同步到本地仓库中：
 
 ```text
 $ git fetch origin
