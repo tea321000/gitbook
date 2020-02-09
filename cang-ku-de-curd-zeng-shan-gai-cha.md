@@ -31,7 +31,17 @@ To https://github.com/user/repo
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
-第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。下一次推送的时候只需要输入**git push**即可。至此我们就完成了一次远程提交到远程仓库的操作。
+第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。下一次推送的时候只需要输入**git push**即可。至此我们就完成了一次远程提交到远程仓库的操作。当文件内容发生**改动**时，我们可以再次使用**git commit**和**git push**完成到远程仓库的推送。
+
+{% hint style="info" %}
+**git clone**下来的其他文件如果需要本地git索引跟踪的话必须要通过**git add**显式添加，未添加但被更改的文件会在**git commit**时出现以下提示：
+
+`Changes not staged for commit:` 
+
+`modified: hello.txt`
+
+`no changes added to commit`
+{% endhint %}
 
 仓库刚建立的时候只有**master**主分支，一般完整的仓库版本迭代需要稳定版**master**主分支，带有比较激进特性的**dev**分支，以及**dev**分支开发过程中一些出现bug还没修好的中间分支。在中间分支完成后合并到**dev**分支，经过一段时间后再合并到**master**分支完成一次更新。详细的分支模型介绍可见如下链接，里面的图非常生动形象。
 
@@ -43,7 +53,26 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 git checkout [branch-name]
 ```
 
-我们还可以使用**git fetch**查看远程仓库的改动，并通过**git pull**将远程仓库的改动同步到本地仓库中：
+我们还可以使用**git fetch查看**远程仓库的改动，并通过**git pull**将远程仓库特定分支（下面为**master**）的改动同步到本地仓库中：
+
+```text
+$ git fetch origin
+$ git pull origin master
+From github.com:user/repo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+```
+
+至此，我们完成了仓库的CURD操作，也了解了git的基本使用方式。如果想了解更多的git指令，可以参考环境准备一节中的quick reference guide链接以及下方的Git官方tutorial、book（含有中文简体翻译）和video：
+
+{% page-ref page="git-de-xia-zai-ji-an-zhuang.md" %}
+
+{% embed url="https://git-scm.com/docs/gittutorial" caption="" %}
+
+{% embed url="https://git-scm.com/book/zh/v2" %}
+
+{% embed url="https://git-scm.com/videos" %}
 
 
 

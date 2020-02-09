@@ -91,7 +91,7 @@ $ git clone git@github.com:user/repo.git
 
 `Please make sure you have the correct access rights and the repository exists.`
 
-这样的错误提示，需要将github.com加入信任的机构中：
+这样的错误提示，需要将github.com加入信任的域名中：
 
 `ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts`
 {% endhint %}
