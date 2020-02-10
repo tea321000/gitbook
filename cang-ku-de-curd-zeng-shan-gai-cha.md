@@ -51,7 +51,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 {% embed url="https://nvie.com/posts/a-successful-git-branching-model/" %}
 
-要新建分支，可以使用**git checkout**命令完成：
+要新建分支，可以使用**git checkout**命令完成（当后面不接branch-name时作用为显示当前分支的跟踪信息）：
 
 ```text
 git checkout branch-name
