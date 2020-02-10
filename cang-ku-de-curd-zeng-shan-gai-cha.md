@@ -32,7 +32,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
 {% hint style="info" %}
-前面假如使用了https协议方式而不是ssh方式来进行克隆，每一次同步操作都需要输入用户名和密码，因为https协议使用带有过期时间的token来进行无状态用户管理。
+前面假如使用了https协议方式而不是ssh方式来进行克隆，第一次同步操作需要输入用户名和密码，因为https协议使用带有过期时间的token来进行无状态用户管理。当输入用户名和密码后，github会将密钥内容添加至`~/.ssh/known_hosts`中，下次就不需要再输入用户名密码。
 {% endhint %}
 
 第一次执行git push远程推送时必须加上-u参数，后面接远程仓库的short name以及分支名，在这里是**origin**以及**master**。下一次推送的时候只需要输入**git push**即可。至此我们就完成了一次远程提交到远程仓库的操作。当文件内容发生**改动**时，我们可以再次使用**git commit**和**git push**完成到远程仓库的推送。
